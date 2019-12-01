@@ -1,9 +1,9 @@
-/* Global */
-.App {
+/* Wrappers */
+section {
   font-family: 'Nunito', sans-serif;
   text-align: center;
 }
-#outer-wrapper {
+section > div {
   background-color: #81543d;
   border: #3a405c solid 3px;
   border-radius: 71px;
@@ -52,7 +52,7 @@
     #fddac3 -16px 16px 100px;
   transition: box-shadow 0.1s ease-out;
 }
-#inner-wrapper {
+section > div > div {
   background-color: #81543d;
   border-radius: 71px;
   display: inline-block;
@@ -97,7 +97,7 @@
 
 /* Keypad */
 #keypad {
-  float: left;
+  display: inline-block;
   padding: 0 20px 0 40px;
 }
 button {

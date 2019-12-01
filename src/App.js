@@ -39,8 +39,8 @@ class App extends Component {
       this.setState({solution: 'Error'});
     }
   }
-  moveBackground(e) {
-    let ratio = e.clientX / document.body.clientWidth;
+  moveBackground(xPosition) {
+    let ratio = xPosition / document.body.clientWidth;
     if (ratio > 0.75) {
       this.setState({shadowPosition: 'outer-shadow-4'});
     } else if (ratio > 0.5) {
@@ -130,7 +130,7 @@ class App extends Component {
     }
   }
   handleMouseMove(evt) {
-    this.moveBackground(evt);
+    this.moveBackground(evt.clientX);
   }
   // Mounting and Rendering
   componentDidMount(){
@@ -180,14 +180,14 @@ class App extends Component {
                 className='tan'>=</button>
       </div>;
     return (
-      <div className="App">
-        <div id="outer-wrapper" className={this.state.shadowPosition}>
+      <section>
+        <div className={this.state.shadowPosition}>
           <div id="inner-wrapper">
             {display}
             {keypad}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
