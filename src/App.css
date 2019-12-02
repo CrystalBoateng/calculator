@@ -60,7 +60,6 @@ section > div > div {
   margin: 6px auto 6px;
   width: 400px;
 }
-
 /* Display */
 #display {
   background-color: white;
@@ -94,7 +93,6 @@ section > div > div {
   vertical-align: bottom;
   width: 100%;
 }
-
 /* Keypad */
 #keypad {
   display: inline-block;
